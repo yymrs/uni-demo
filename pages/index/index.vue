@@ -26,16 +26,16 @@
 			</view>
 		</view>
 		<!-- 分类 -->
-		<view class="cate-section" @click="navToList(1)">
+		<view class="cate-section" @click="navToListdd(1)">
 			<view class="cate-item">
 				<image src="/static/temp/c3.png"></image>
 				<text>环球美食</text>
 			</view>
-			<view class="cate-item" @click="navToList(2)">
+			<view class="cate-item" @click="navToListdd(2)">
 				<image src="/static/temp/c5.png"></image>
 				<text>个护美妆</text>
 			</view>
-			<view class="cate-item" @click="navToList(3)">
+			<view class="cate-item" @click="navToListdd(3)">
 				<image src="/static/temp/c6.png"></image>
 				<text>营养保健</text>
 			</view>
@@ -108,7 +108,7 @@
 				})
 			},
 			//前四个商品列表
-			navToList(sid, tid) {
+			navToListdd(sid, tid) {
 				console.log(456)
 				uni.navigateTo({
 					url: `/pages/product/list?fname=${this.currentname}`

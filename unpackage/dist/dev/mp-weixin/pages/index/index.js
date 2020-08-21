@@ -248,7 +248,7 @@ var _default =
 
     },
     //前四个商品列表
-    navToList: function navToList(sid, tid) {
+    navToListdd: function navToListdd(sid, tid) {
       console.log(456);
       uni.navigateTo({
         url: "/pages/product/list?fname=".concat(this.currentname) });
