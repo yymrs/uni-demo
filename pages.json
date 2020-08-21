@@ -5,10 +5,9 @@
 			"path": "pages/index/index",
 			"style": {
 				// #ifdef MP 
-				"navigationBarTitleText": "布施商城",
+				"navigationBarTitleText": "布施商城"
 				//"navigationStyle": "custom",
 				// #endif 
-				"navigationBarBackgroundColor": "#25553b"
 			}
 		},
 		{
@@ -127,13 +126,13 @@
 	"globalStyle": {
 		"navigationBarTextStyle": "white",
 		"navigationBarTitleText": "首页",
-		"navigationBarBackgroundColor": "#25553b",
+		"navigationBarBackgroundColor": "#00b150",
 		"backgroundColor": "#f8f8f8"
 
 	},
 	"tabBar": {
 		"color": "#C0C4CC",
-		"selectedColor": "#25553b",
+		"selectedColor": "#00b150",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		// "fontSize":"15",

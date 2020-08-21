@@ -23,12 +23,12 @@
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "首页",
-    "navigationBarBackgroundColor": "#25553b",
+    "navigationBarBackgroundColor": "#00b150",
     "backgroundColor": "#f8f8f8"
   },
   "tabBar": {
     "color": "#C0C4CC",
-    "selectedColor": "#25553b",
+    "selectedColor": "#00b150",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [

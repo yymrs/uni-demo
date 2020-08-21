@@ -128,7 +128,7 @@
 .order-section .yticon {
   font-size: 48rpx;
   margin-bottom: 18rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .order-section .icon-shouhoutuikuan {
   font-size: 44rpx;
