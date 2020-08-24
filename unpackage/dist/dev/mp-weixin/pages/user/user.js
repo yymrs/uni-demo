@@ -278,7 +278,6 @@ pageAtTop = true;var _default =
         url: url });
 
     },
-    // <<<<<<< HEAD
     wxGetUserInfo: function wxGetUserInfo(res) {
       console.log(res);
       if (!res.detail.iv) {
@@ -288,15 +287,11 @@ pageAtTop = true;var _default =
 
         return false;
       }
-      // =======
-      // 			toLogin() {
-      // 				let that =this
-      // >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+
       uni.login({
         provider: 'weixin',
         success: function success(loginRes) {
           var code = loginRes.code;
-          // <<<<<<< HEAD
           console.log(loginRes);
           console.log(code);
           // uni.getUserInfo({
@@ -312,7 +307,6 @@ pageAtTop = true;var _default =
         },
         fail: function fail(res) {
           console.log(res);
-          // =======
           uni.getUserInfo({
             success: function success(info) {
               var xinxi = {
@@ -325,7 +319,6 @@ pageAtTop = true;var _default =
               }
             } });
 
-          // >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
         } });
 
       this.login(res.detail.userInfo);

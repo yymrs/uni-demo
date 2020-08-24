@@ -9,7 +9,7 @@
 				</view>
 				<view class="info-box">
 
-					<button v-if="!userInfo.nickName"  open-type="getUserInfo" @getuserinfo="wxGetUserInfo" >一键登录</button>
+					<button v-if="!userInfo.nickName" open-type="getUserInfo" @getuserinfo="wxGetUserInfo">一键登录</button>
 					<button v-else>{{userInfo.nickName}}</button>
 
 				</view>
@@ -90,11 +90,11 @@
 				coverTransition: '0s',
 				moving: false,
 				// userInfo:{
-					
+
 				// }
 			}
 		},
-		
+
 		onLoad() {
 			wx.getSetting({
 				success: function(res) {
@@ -146,8 +146,7 @@
 					url
 				})
 			},
-// <<<<<<< HEAD
-			wxGetUserInfo(res){
+			wxGetUserInfo(res) {
 				console.log(res)
 				if (!res.detail.iv) {
 					uni.showToast({
@@ -156,15 +155,11 @@
 					});
 					return false;
 				}
-// =======
-// 			toLogin() {
-// 				let that =this
-// >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+
 				uni.login({
 					provider: 'weixin',
 					success: function(loginRes) {
 						let code = loginRes.code
-// <<<<<<< HEAD
 						console.log(loginRes)
 						console.log(code)
 						// uni.getUserInfo({
@@ -180,7 +175,6 @@
 					},
 					fail: function(res) {
 						console.log(res)
-// =======
 						uni.getUserInfo({
 							success: info => {
 								let xinxi = {
@@ -188,12 +182,11 @@
 									"signature": info.signature,
 									"iv": info.iv,
 								}
-								if(xinxi !=''){
+								if (xinxi != '') {
 									that.login(xinxi);
 								}
 							}
 						})
-// >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
 					}
 				});
 				this.login(res.detail.userInfo)
@@ -202,7 +195,7 @@
 			},
 			// login(res) {
 			// console.log(res)
-				
+
 			// },
 		}
 	}
