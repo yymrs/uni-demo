@@ -8,12 +8,10 @@
 					<image class="portrait" :src="userInfo.avatarUrl || '/static/missing-face.png'"></image>
 				</view>
 				<view class="info-box">
-<<<<<<< HEAD
+
 					<button v-if="!userInfo.nickName"  open-type="getUserInfo" @getuserinfo="wxGetUserInfo" >一键登录</button>
 					<button v-else>{{userInfo.nickName}}</button>
-=======
-					<button open-type="getUserInfo" @click="toLogin">昵称</button>
->>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+
 				</view>
 				<!-- <button open-type="getUserInfo" @getuserinfo='login'>一键登录</button> -->
 				<view class="vip" v-if='userInfo.nickName'>
@@ -75,14 +73,9 @@
 <script>
 	import listCell from '@/components/mix-list-cell';
 	import {
-<<<<<<< HEAD
-		mapState,mapMutations
-=======
-
 		mapState,
 		mapMutations
 
->>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
 	} from 'vuex';
 	let startY = 0,
 		moveY = 0,
@@ -153,7 +146,7 @@
 					url
 				})
 			},
-<<<<<<< HEAD
+// <<<<<<< HEAD
 			wxGetUserInfo(res){
 				console.log(res)
 				if (!res.detail.iv) {
@@ -163,15 +156,15 @@
 					});
 					return false;
 				}
-=======
-			toLogin() {
-				let that =this
->>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+// =======
+// 			toLogin() {
+// 				let that =this
+// >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
 				uni.login({
 					provider: 'weixin',
 					success: function(loginRes) {
 						let code = loginRes.code
-<<<<<<< HEAD
+// <<<<<<< HEAD
 						console.log(loginRes)
 						console.log(code)
 						// uni.getUserInfo({
@@ -187,7 +180,7 @@
 					},
 					fail: function(res) {
 						console.log(res)
-=======
+// =======
 						uni.getUserInfo({
 							success: info => {
 								let xinxi = {
@@ -200,7 +193,7 @@
 								}
 							}
 						})
->>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+// >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
 					}
 				});
 				this.login(res.detail.userInfo)

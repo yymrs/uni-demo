@@ -10,11 +10,6 @@ const store = new Vuex.Store({
 	},
 	mutations: {
 		login(state, provider) {
-<<<<<<< HEAD
-			console.log(state)
-=======
-			console.log(provider)
->>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
 			state.hasLogin = true;
 			state.userInfo = provider;
 			uni.setStorage({//缓存用户登陆状态

@@ -127,9 +127,217 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!D:/WeChat Files/wxid_0465gkm9ijcv11/FileStorage/File/2020-08/a/pages/user/user.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js):\nSyntaxError: Unexpected token (78:0)\n    at Object.raise (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:7017:17)\n    at Object.unexpected (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:8395:16)\n    at Object.parseIdentifierName (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10357:18)\n    at Object.parseIdentifier (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10335:23)\n    at Object.parseImportSpecifier (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12090:31)\n    at Object.parseNamedImportSpecifiers (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12084:12)\n    at Object.parseImport (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12023:39)\n    at Object.parseImport (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:5920:18)\n    at Object.parseStatementContent (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10788:27)\n    at Object.parseStatementContent (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:5976:18)\n    at Object.parseStatement (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10690:17)\n    at Object.parseBlockOrModuleBlockBody (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11264:25)\n    at Object.parseBlockBody (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:11251:10)\n    at Object.parseTopLevel (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10621:10)\n    at Object.parse (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12222:10)\n    at Object.parse (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:12273:38)");
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var _vuex = __webpack_require__(/*! vuex */ 6);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var listCell = function listCell() {__webpack_require__.e(/*! require.ensure | components/mix-list-cell */ "components/mix-list-cell").then((function () {return resolve(__webpack_require__(/*! @/components/mix-list-cell */ 173));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
+
+
+
+var startY = 0,
+moveY = 0,
+pageAtTop = true;var _default =
+{
+  components: {
+    listCell: listCell },
+
+  data: function data() {
+    return {
+      coverTransform: 'translateY(0px)',
+      coverTransition: '0s',
+      moving: false
+      // userInfo:{
+
+      // }
+    };
+  },
+
+  onLoad: function onLoad() {
+    wx.getSetting({
+      success: function success(res) {
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: function success(res) {
+              console.log(res.userInfo);
+              //用户已经授权过
+            } });
+
+        }
+      } });
+
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  computed: _objectSpread({},
+  (0, _vuex.mapState)(['hasLogin', 'userInfo'])),
+
+  methods: _objectSpread({},
+  (0, _vuex.mapMutations)(['login']), {
+    /**
+                                         * 统一跳转接口,拦截未登录路由
+                                         * navigator标签现在默认没有转场动画，所以用view
+                                         */
+    navTo: function navTo(url) {
+      if (!this.hasLogin) {
+        url = '/pages/public/login';
+      }
+      uni.navigateTo({
+        url: url });
+
+    },
+    // <<<<<<< HEAD
+    wxGetUserInfo: function wxGetUserInfo(res) {
+      console.log(res);
+      if (!res.detail.iv) {
+        uni.showToast({
+          title: "您取消了授权,登录失败",
+          icon: "none" });
+
+        return false;
+      }
+      // =======
+      // 			toLogin() {
+      // 				let that =this
+      // >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+      uni.login({
+        provider: 'weixin',
+        success: function success(loginRes) {
+          var code = loginRes.code;
+          // <<<<<<< HEAD
+          console.log(loginRes);
+          console.log(code);
+          // uni.getUserInfo({
+          // 	success: info => {
+          // 		this.userInfo = info.userInfo
+          // 		this.login(info.userInfo)
+          // 		console.log(info);
+          // 	},
+          // 	fail: function(res) {
+          // 		console.log(res)
+          // 	}
+          // })
+        },
+        fail: function fail(res) {
+          console.log(res);
+          // =======
+          uni.getUserInfo({
+            success: function success(info) {
+              var xinxi = {
+                "encryptedData": info.encryptedData,
+                "signature": info.signature,
+                "iv": info.iv };
+
+              if (xinxi != '') {
+                that.login(xinxi);
+              }
+            } });
+
+          // >>>>>>> 7e3fbfdf53c4d98b3f4c731f28c89d118d8e5375
+        } });
+
+      this.login(res.detail.userInfo);
+      console.log('-------用户授权，并获取用户基本信息和加密数据------');
+      console.log(res.detail.userInfo);
+    }
+    // login(res) {
+    // console.log(res)
+
+    // },
+  }) };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 
