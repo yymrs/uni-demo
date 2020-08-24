@@ -10,8 +10,9 @@
 			...mapMutations(['login'])
 		},
 		onLaunch: function() {
+			//全局获取登录信息
 			let userInfo = uni.getStorageSync('userInfo') || '';
-			if(userInfo.id){
+			if(userInfo !=""){
 				//更新登陆状态
 				uni.getStorage({
 					key: 'userInfo',

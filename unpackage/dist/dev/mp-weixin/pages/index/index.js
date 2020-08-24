@@ -219,9 +219,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 var _default =
 {
 
@@ -238,6 +235,7 @@ var _default =
 
   onLoad: function onLoad() {
     this.loadData();
+
   },
   methods: {
     //点击全部分类
@@ -248,7 +246,7 @@ var _default =
 
     },
     //前四个商品列表
-    navToListdd: function navToListdd(sid, tid) {
+    tolist: function tolist(sid, tid) {
       console.log(456);
       uni.navigateTo({
         url: "/pages/product/list?fname=".concat(this.currentname) });
@@ -256,6 +254,12 @@ var _default =
     },
     //点击购物车
     cart: function cart() {
+      uni.getStorage({
+        key: 'token',
+        success: function success(res) {
+          console.log(res.data);
+        } });
+
       uni.navigateTo({
         url: '/pages/cart/cart' });
 
@@ -269,7 +273,6 @@ var _default =
                 _this.titleNViewBackground = carouselList[0].background;
                 _this.swiperLength = carouselList.length;
                 _this.carouselList = carouselList;_context.next = 8;return (
-
                   _this.$api.json('goodsList'));case 8:goodsList = _context.sent;
                 _this.goodsList = goodsList || [];case 10:case "end":return _context.stop();}}}, _callee);}))();
     },

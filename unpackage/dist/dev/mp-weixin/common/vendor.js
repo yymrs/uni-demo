@@ -7701,7 +7701,7 @@ var store = new _vuex.default.Store({
 
   mutations: {
     login: function login(state, provider) {
-
+      console.log(provider);
       state.hasLogin = true;
       state.userInfo = provider;
       uni.setStorage({ //缓存用户登陆状态

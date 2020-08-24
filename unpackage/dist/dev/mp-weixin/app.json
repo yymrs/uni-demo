@@ -39,12 +39,6 @@
         "text": "布施商城"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "static/tab-cart.png",
-        "selectedIconPath": "static/tab-cart-current.png",
-        "text": "加持商城"
-      },
-      {
         "pagePath": "pages/user/user",
         "iconPath": "static/tab-my.png",
         "selectedIconPath": "static/tab-my-current.png",
@@ -52,5 +46,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap20.json"
 }

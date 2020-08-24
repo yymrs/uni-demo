@@ -93,6 +93,7 @@
 					password
 				};
 				const result = await this.$api.json('userInfo');
+				console.log(result)
 				if(result.status === 1){
 					this.login(result.data);
                     uni.navigateBack();  

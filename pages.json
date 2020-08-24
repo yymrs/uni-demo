@@ -1,24 +1,17 @@
 {
 	"pages": [
-
 		{
 			"path": "pages/index/index",
 			"style": {
 				// #ifdef MP 
 				"navigationBarTitleText": "布施商城"
-				//"navigationStyle": "custom",
 				// #endif 
 			}
 		},
 		{
 			"path": "pages/product/product",
 			"style": {
-				"navigationBarTitleText": "详情展示",
-				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
-				}
+				"navigationBarTitleText": "详情展示"
 			}
 		}, {
 			"path": "pages/set/set",
@@ -41,11 +34,7 @@
 			"path": "pages/public/login",
 			"style": {
 				"navigationBarTitleText": "",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": false,
-					"animationType": "slide-in-bottom"
-				}
+				"navigationStyle": "custom"
 			}
 		}, {
 			"path": "pages/user/user",
@@ -58,20 +47,12 @@
 		}, {
 			"path": "pages/detail/detail",
 			"style": {
-				"navigationBarTitleText": "",
-				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
-				}
+				"navigationBarTitleText": ""
 			}
 		}, {
 			"path": "pages/order/order",
 			"style": {
-				"navigationBarTitleText": "我的订单",
-				"app-plus": {
-					"bounce": "none"
-				}
+				"navigationBarTitleText": "我的订单"
 			}
 		}, {
 			"path": "pages/money/money",
@@ -110,10 +91,7 @@
 		}, {
 			"path": "pages/category/category",
 			"style": {
-				"navigationBarTitleText": "全部分类",
-				"app-plus": {
-					"bounce": "none"
-				}
+				"navigationBarTitleText": "全部分类"
 			}
 		}, {
 			"path": "pages/product/list",
@@ -135,18 +113,11 @@
 		"selectedColor": "#00b150",
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
-		// "fontSize":"15",
 		"list": [{
 				"pagePath": "pages/index/index",
 				"iconPath": "static/tab-home.png",
 				"selectedIconPath": "static/tab-home-current.png",
 				"text": "布施商城"
-			},
-			{
-				"pagePath": "pages/index/index",
-				"iconPath": "static/tab-cart.png",
-				"selectedIconPath": "static/tab-cart-current.png",
-				"text": "加持商城"
 			},
 			{
 				"pagePath": "pages/user/user",

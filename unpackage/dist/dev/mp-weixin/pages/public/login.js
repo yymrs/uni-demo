@@ -225,13 +225,14 @@ var _vuex = __webpack_require__(/*! vuex */ 6);function _interopRequireDefault(o
                   password: password };_context.next = 5;return (
 
                   _this.$api.json('userInfo'));case 5:result = _context.sent;
+                console.log(result);
                 if (result.status === 1) {
                   _this.login(result.data);
                   uni.navigateBack();
                 } else {
                   _this.$api.msg(result.msg);
                   _this.logining = false;
-                }case 7:case "end":return _context.stop();}}}, _callee);}))();
+                }case 8:case "end":return _context.stop();}}}, _callee);}))();
     } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

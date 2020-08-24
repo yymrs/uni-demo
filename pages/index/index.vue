@@ -26,20 +26,20 @@
 			</view>
 		</view>
 		<!-- 分类 -->
-		<view class="cate-section" @click="navToListdd(1)">
-			<view class="cate-item">
+		<view class="cate-section">
+			<view class="cate-item" @click="tolist">
 				<image src="/static/temp/c3.png"></image>
 				<text>环球美食</text>
 			</view>
-			<view class="cate-item" @click="navToListdd(2)">
+			<view class="cate-item" @click="tolist">
 				<image src="/static/temp/c5.png"></image>
 				<text>个护美妆</text>
 			</view>
-			<view class="cate-item" @click="navToListdd(3)">
+			<view class="cate-item" @click="tolist">
 				<image src="/static/temp/c6.png"></image>
 				<text>营养保健</text>
 			</view>
-			<view class="cate-item" @click="navToList(4)">
+			<view class="cate-item" @click="tolist">
 				<image src="/static/temp/c7.png"></image>
 				<text>家居厨卫</text>
 			</view>
@@ -57,7 +57,6 @@
 			</view>
 			<text class="yticon icon-you"></text>
 		</view>
-
 		<!-- 商品热销 -->
 		<view class="f-header m-t">
 			<image src="/static/temp/h1.png"></image>
@@ -67,7 +66,6 @@
 			</view>
 			<text class="yticon icon-you"></text>
 		</view>
-
 		<view class="guess-section">
 			<view v-for="(item, index) in goodsList" :key="index" class="guess-item" @click="navToDetailPage(item)">
 				<view class="image-wrapper">
@@ -77,8 +75,7 @@
 				<text class="price">￥{{item.price}}</text>
 			</view>
 		</view>
-
-
+		
 	</view>
 </template>
 
@@ -98,6 +95,7 @@
 
 		onLoad() {
 			this.loadData();
+			
 		},
 		methods: {
 			//点击全部分类
@@ -108,7 +106,7 @@
 				})
 			},
 			//前四个商品列表
-			navToListdd(sid, tid) {
+			tolist(sid, tid) {
 				console.log(456)
 				uni.navigateTo({
 					url: `/pages/product/list?fname=${this.currentname}`
@@ -116,6 +114,12 @@
 			},
 			//点击购物车
 			cart() {
+				uni.getStorage({
+				    key: 'token',
+				    success: function (res) {
+				        console.log(res.data);
+				    }
+				});
 				uni.navigateTo({
 					url: '/pages/cart/cart'
 				})
@@ -129,7 +133,6 @@
 				this.titleNViewBackground = carouselList[0].background;
 				this.swiperLength = carouselList.length;
 				this.carouselList = carouselList;
-
 				let goodsList = await this.$api.json('goodsList');
 				this.goodsList = goodsList || [];
 			},
@@ -147,8 +150,8 @@
 					url: `/pages/product/product?id=${id}`
 				})
 			},
-		
-			
+
+
 
 		},
 		// #ifndef MP

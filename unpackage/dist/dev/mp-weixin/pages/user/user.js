@@ -200,47 +200,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 var _vuex = __webpack_require__(/*! vuex */ 6);function ownKeys(object, enumerableOnly) {var keys = Object.keys(object);if (Object.getOwnPropertySymbols) {var symbols = Object.getOwnPropertySymbols(object);if (enumerableOnly) symbols = symbols.filter(function (sym) {return Object.getOwnPropertyDescriptor(object, sym).enumerable;});keys.push.apply(keys, symbols);}return keys;}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};if (i % 2) {ownKeys(Object(source), true).forEach(function (key) {_defineProperty(target, key, source[key]);});} else if (Object.getOwnPropertyDescriptors) {Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));} else {ownKeys(Object(source)).forEach(function (key) {Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));});}}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var listCell = function listCell() {__webpack_require__.e(/*! require.ensure | components/mix-list-cell */ "components/mix-list-cell").then((function () {return resolve(__webpack_require__(/*! @/components/mix-list-cell */ 173));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};
+
+
+
 
 
 var startY = 0,
@@ -281,12 +244,12 @@ pageAtTop = true;var _default =
   computed: _objectSpread({},
   (0, _vuex.mapState)(['hasLogin', 'userInfo'])),
 
-  methods: {
-
+  methods: _objectSpread({},
+  (0, _vuex.mapMutations)(['login']), {
     /**
-              * 统一跳转接口,拦截未登录路由
-              * navigator标签现在默认没有转场动画，所以用view
-              */
+                                         * 统一跳转接口,拦截未登录路由
+                                         * navigator标签现在默认没有转场动画，所以用view
+                                         */
     navTo: function navTo(url) {
       if (!this.hasLogin) {
         url = '/pages/public/login';
@@ -295,19 +258,27 @@ pageAtTop = true;var _default =
         url: url });
 
     },
-    login: function login() {
+    toLogin: function toLogin() {
+      var that = this;
       uni.login({
         provider: 'weixin',
         success: function success(loginRes) {
           var code = loginRes.code;
           uni.getUserInfo({
             success: function success(info) {
-              console.log(info);
+              var xinxi = {
+                "encryptedData": info.encryptedData,
+                "signature": info.signature,
+                "iv": info.iv };
+
+              if (xinxi != '') {
+                that.login(xinxi);
+              }
             } });
 
         } });
 
-    } } };exports.default = _default;
+    } }) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
