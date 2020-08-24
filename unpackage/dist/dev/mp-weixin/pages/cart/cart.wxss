@@ -44,7 +44,7 @@
   color: #C0C4CC;
 }
 .container .empty .empty-tips .navigator {
-  color: #25553b;
+  color: #00b150;
   margin-left: 16rpx;
 }
 /* 购物车列表项 */
@@ -196,12 +196,12 @@
   height: 76rpx;
   line-height: 76rpx;
   font-size: 30rpx;
-  background: #25553b;
+  background: #00b150;
   box-shadow: 1px 2px 5px rgba(37, 85, 59, 0.7);
 }
 /* 复选框选中状态 */
 .action-section .checkbox.checked,
 .cart-item .checkbox.checked {
-  color: #25553b;
+  color: #00b150;
 }
 

@@ -23,12 +23,12 @@
   "window": {
     "navigationBarTextStyle": "white",
     "navigationBarTitleText": "首页",
-    "navigationBarBackgroundColor": "#25553b",
+    "navigationBarBackgroundColor": "#00b150",
     "backgroundColor": "#f8f8f8"
   },
   "tabBar": {
     "color": "#C0C4CC",
-    "selectedColor": "#25553b",
+    "selectedColor": "#00b150",
     "borderStyle": "black",
     "backgroundColor": "#ffffff",
     "list": [
@@ -39,12 +39,6 @@
         "text": "布施商城"
       },
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "static/tab-cart.png",
-        "selectedIconPath": "static/tab-cart-current.png",
-        "text": "加持商城"
-      },
-      {
         "pagePath": "pages/user/user",
         "iconPath": "static/tab-my.png",
         "selectedIconPath": "static/tab-my-current.png",
@@ -52,6 +46,5 @@
       }
     ]
   },
-  "usingComponents": {},
-  "sitemapLocation": "sitemap95.json"
+  "usingComponents": {}
 }

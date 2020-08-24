@@ -7637,45 +7637,9 @@ module.exports = g;
   !*** D:/WeChat Files/wxid_0465gkm9ijcv11/FileStorage/File/2020-08/a/store/index.js ***!
   \*************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _vuex = _interopRequireDefault(__webpack_require__(/*! vuex */ 6));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-_vue.default.use(_vuex.default);
-
-var store = new _vuex.default.Store({
-  state: {
-    hasLogin: false,
-    userInfo: {} },
-
-  mutations: {
-    login: function login(state, provider) {
-      console.log(state);
-      state.hasLogin = true;
-      state.userInfo = provider;
-      uni.setStorage({ //缓存用户登陆状态
-        key: 'userInfo',
-        data: provider });
-
-      console.log(state.userInfo);
-    },
-    logout: function logout(state) {
-      state.hasLogin = false;
-      state.userInfo = {};
-      uni.removeStorage({
-        key: 'userInfo' });
-
-    } },
-
-  actions: {} });var _default =
-
-
-
-
-store;exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: D:\\WeChat Files\\wxid_0465gkm9ijcv11\\FileStorage\\File\\2020-08\\a\\store\\index.js: Unexpected token (13:1)\n\n  11 | \tmutations: {\n  12 | \t\tlogin(state, provider) {\n> 13 | <<<<<<< HEAD\n     |  ^\n  14 | \t\t\tconsole.log(state)\n  15 | =======\n  16 | \t\t\tconsole.log(provider)\n    at Object._raise (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:742:17)\n    at Object.raiseWithData (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:735:17)\n    at Object.raise (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:729:17)\n    at Object.unexpected (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:8757:16)\n    at Object.jsxParseIdentifier (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4388:12)\n    at Object.jsxParseNamespacedName (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4398:23)\n    at Object.jsxParseElementName (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4409:21)\n    at Object.jsxParseOpeningElementAt (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4495:22)\n    at Object.jsxParseElementAt (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4528:33)\n    at Object.jsxParseElement (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4602:17)\n    at Object.parseExprAtom (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:4609:19)\n    at Object.parseExprSubscripts (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:9602:23)\n    at Object.parseMaybeUnary (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:9582:21)\n    at Object.parseExprOps (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:9452:23)\n    at Object.parseMaybeConditional (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:9425:23)\n    at Object.parseMaybeAssign (D:\\HBuilderX.2.7.9.20200527.full\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\core\\node_modules\\@babel\\parser\\lib\\index.js:9380:21)");
 
 /***/ }),
 /* 6 */

@@ -104,7 +104,7 @@
   margin: 80rpx auto 30rpx;
   font-size: 32rpx;
   color: #fff;
-  background-color: #25553b;
+  background-color: #00b150;
   border-radius: 10rpx;
   box-shadow: 1px 2px 5px rgba(219, 63, 96, 0.4);
 }

@@ -144,8 +144,9 @@ var _vuex = __webpack_require__(/*! vuex */ 6);function ownKeys(object, enumerab
   (0, _vuex.mapMutations)(['login'])),
 
   onLaunch: function onLaunch() {var _this = this;
+    //全局获取登录信息
     var userInfo = uni.getStorageSync('userInfo') || '';
-    if (userInfo.id) {
+    if (userInfo != "") {
       //更新登陆状态
       uni.getStorage({
         key: 'userInfo',

@@ -214,10 +214,10 @@ page {
   color: #909399;
 }
 .yt-list-cell .cell-tip.active {
-  color: #25553b;
+  color: #00b150;
 }
 .yt-list-cell .cell-tip.red {
-  color: #25553b;
+  color: #00b150;
 }
 .yt-list-cell.desc-cell .cell-tit {
   max-width: 90rpx;
@@ -270,7 +270,7 @@ page {
   width: 60rpx;
   height: 60rpx;
   font-size: 40rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .pay-list .tit {
   font-size: 32rpx;
@@ -305,12 +305,12 @@ page {
   padding-left: 30rpx;
 }
 .footer .price-tip {
-  color: #25553b;
+  color: #00b150;
   margin-left: 8rpx;
 }
 .footer .price {
   font-size: 36rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .footer .submit {
   display: -webkit-box;
@@ -326,7 +326,7 @@ page {
   height: 100%;
   color: #fff;
   font-size: 32rpx;
-  background-color: #25553b;
+  background-color: #00b150;
 }
 /* 优惠券面板 */
 .mask {
@@ -447,7 +447,7 @@ page {
 }
 .coupon-item .price {
   font-size: 44rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .coupon-item .price:before {
   content: '￥';

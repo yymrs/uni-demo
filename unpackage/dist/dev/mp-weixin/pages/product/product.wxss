@@ -61,7 +61,7 @@ page {
   height: 64rpx;
   padding: 10rpx 0;
   font-size: 26rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .introduce-section .price {
   font-size: 34rpx;
@@ -76,7 +76,7 @@ page {
   -webkit-align-items: center;
           align-items: center;
   padding: 4rpx 10rpx;
-  background: #25553b;
+  background: #00b150;
   font-size: 24rpx;
   color: #fff;
   border-radius: 6rpx;
@@ -123,12 +123,12 @@ page {
   width: 70rpx;
   height: 30rpx;
   line-height: 1;
-  border: 1px solid #25553b;
+  border: 1px solid #00b150;
   border-radius: 4rpx;
   position: relative;
   overflow: hidden;
   font-size: 22rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .share-section .share-icon:after {
   content: '';
@@ -138,7 +138,7 @@ page {
   left: -20rpx;
   top: -12rpx;
   position: absolute;
-  background: #25553b;
+  background: #00b150;
 }
 .share-section .icon-xingxing {
   position: relative;
@@ -164,12 +164,12 @@ page {
           flex: 1;
   text-align: right;
   font-size: 24rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .share-section .icon-you {
   font-size: 24rpx;
   margin-left: 4rpx;
-  color: #25553b;
+  color: #00b150;
 }
 .c-list {
   font-size: 26rpx;
@@ -222,7 +222,7 @@ page {
   line-height: 40rpx;
 }
 .c-list .red {
-  color: #25553b;
+  color: #00b150;
 }
 /* 评价 */
 .eva-section {
@@ -374,7 +374,7 @@ page {
 }
 .attr-content .a-t .right .price {
   font-size: 32rpx;
-  color: #25553b;
+  color: #00b150;
   margin-bottom: 10rpx;
 }
 .attr-content .a-t .right .selected-text {
@@ -423,7 +423,7 @@ page {
 }
 .attr-content .item-list .selected {
   background: #fbebee;
-  color: #25553b;
+  color: #00b150;
 }
 /*  弹出层 */
 .popup {
@@ -477,7 +477,7 @@ page {
   height: 66rpx;
   line-height: 66rpx;
   border-radius: 100rpx;
-  background: #25553b;
+  background: #00b150;
   font-size: 30rpx;
   color: #fff;
   margin: 30rpx auto 20rpx;
@@ -600,7 +600,7 @@ page {
   color: #909399;
 }
 .page-bottom .p-b-btn.active, .page-bottom .p-b-btn.active .yticon {
-  color: #25553b;
+  color: #00b150;
 }
 .page-bottom .p-b-btn .icon-fenxiang2 {
   font-size: 42rpx;
