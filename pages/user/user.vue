@@ -5,13 +5,14 @@
 			<image class="bg" src="/static/user-bg.jpg"></image>
 			<view class="user-info-box">
 				<view class="portrait-box">
-					<image class="portrait" :src="userInfo.portrait || '/static/missing-face.png'"></image>
+					<image class="portrait" :src="userInfo.avatarUrl || '/static/missing-face.png'"></image>
 				</view>
 				<view class="info-box">
-					<button open-type="getUserInfo" @click="login">昵称</button>
-					
+					<button v-if="!userInfo.nickName"  open-type="getUserInfo" @getuserinfo="wxGetUserInfo" >一键登录</button>
+					<button v-else>{{userInfo.nickName}}</button>
 				</view>
-				<view class="vip">
+				<!-- <button open-type="getUserInfo" @getuserinfo='login'>一键登录</button> -->
+				<view class="vip" v-if='userInfo.nickName'>
 					普通会员
 				</view>
 			</view>
@@ -109,7 +110,7 @@
 <script>
 	import listCell from '@/components/mix-list-cell';
 	import {
-		mapState
+		mapState,mapMutations
 	} from 'vuex';
 	let startY = 0,
 		moveY = 0,
@@ -123,9 +124,26 @@
 				coverTransform: 'translateY(0px)',
 				coverTransition: '0s',
 				moving: false,
+				// userInfo:{
+					
+				// }
 			}
 		},
-		onLoad() {},
+		
+		onLoad() {
+			wx.getSetting({
+				success: function(res) {
+					if (res.authSetting['scope.userInfo']) {
+						wx.getUserInfo({
+							success: function(res) {
+								console.log(res.userInfo)
+								//用户已经授权过
+							}
+						})
+					}
+				},
+			})
+		},
 		// #ifndef MP
 		onNavigationBarButtonTap(e) {
 			const index = e.index;
@@ -150,7 +168,7 @@
 			...mapState(['hasLogin', 'userInfo'])
 		},
 		methods: {
-
+			...mapMutations(['login']),
 			/**
 			 * 统一跳转接口,拦截未登录路由
 			 * navigator标签现在默认没有转场动画，所以用view
@@ -163,19 +181,44 @@
 					url
 				})
 			},
-			login() {
+			wxGetUserInfo(res){
+				console.log(res)
+				if (!res.detail.iv) {
+					uni.showToast({
+						title: "您取消了授权,登录失败",
+						icon: "none"
+					});
+					return false;
+				}
 				uni.login({
 					provider: 'weixin',
 					success: function(loginRes) {
 						let code = loginRes.code
-						uni.getUserInfo({
-							success: info => {
-								console.log(info);
-							}
-						})
+						console.log(loginRes)
+						console.log(code)
+						// uni.getUserInfo({
+						// 	success: info => {
+						// 		this.userInfo = info.userInfo
+						// 		this.login(info.userInfo)
+						// 		console.log(info);
+						// 	},
+						// 	fail: function(res) {
+						// 		console.log(res)
+						// 	}
+						// })
+					},
+					fail: function(res) {
+						console.log(res)
 					}
 				});
-			}
+				this.login(res.detail.userInfo)
+				console.log('-------用户授权，并获取用户基本信息和加密数据------')
+				console.log(res.detail.userInfo);
+			},
+			// login(res) {
+			// console.log(res)
+				
+			// },
 		}
 	}
 </script>
@@ -239,9 +282,7 @@
 			margin-left: 20upx;
 		}
 
-		.info-box {
-			
-		}
+		.info-box {}
 
 		.vip {
 			width: 132upx;
